@@ -36,6 +36,7 @@ router.get('/', (req, res) => {
     });
 });
 
+
 router.get('/post/:id', (req, res) => {
   Post.findOne({
     where: {
@@ -56,17 +57,26 @@ router.get('/post/:id', (req, res) => {
         },
       },
     ],
-  })
-  .then(returnedPostData => {
-    if(!returnedPostData) {
-      res.status(404).json({message: 'Could not find a post with this id'});
+  }).then((returnedPostData) => {
+    if (!returnedPostData) {
+      res.status(404).json({ message: 'Could not find a post with this id' });
       return;
     }
-    const singlePost = returnedPostData.get({plain: true});
+    const singlePost = returnedPostData.get({ plain: true });
     res.render('singlePost', {
-      singlePost
-    })
-  })
+      singlePost,
+    });
+  });
+});
+
+
+router.get('/login', (req, res) => {
+  res.render('login');
+});
+
+
+router.get('/signup', (req, res) => {
+  res.render('signup');
 });
 
 module.exports = router;
