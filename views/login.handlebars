@@ -12,24 +12,26 @@
         <div class='card-body py-5 px-md-5'>
           <form>
             <div class='form-outline mb-4'>
-              <input type='email' id='emailInsert' class='form-control' />
-              <label class='form-label' for='emailInsert'>Username</label>
+              <input type='email' id='usernameLogin' class='form-control' />
+              <label class='form-label' for='usernameLogin'>Username</label>
             </div>
 
             <div class='form-outline mb-4'>
-              <input type='password' id='passwordInsert' class='form-control' />
-              <label class='form-label' for='passwordInsert'>Password</label>
+              <input type='password' id='passwordLogin' class='form-control' />
+              <label class='form-label' for='passwordLogin'>Password</label>
             </div>
 
-            <div class='row mb-4'>
-              <div class='col d-flex justify-content-center'>
-              </div>
+            <button
+              type='button'
+              class='btn btn-primary btn-block mb-4'
+              id='loginBtn'
+            >Login</button>
 
-              <div class='col'>
-                <a href='#!'>Forgot password?</a>
-              </div>
-            </div>
-            <button type='button' class='btn btn-primary btn-block mb-4' id="loginBtn">Login</button>
+            <button
+              type='button'
+              class='btn btn-primary btn-block mb-4'
+              id='signupRedirectBtn'
+            >Click here to create an account</button>
           </form>
 
         </div>
