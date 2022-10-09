@@ -1,9 +1,11 @@
+<div class="border-top pt-3">
+  <h2>All Posts</h2>
+</div>
+
 <ul class="post-list">
-  <br>
   {{#each posts as |post|}}
-  <li class="border border p-2 mt-5">
+  <li class="border border p-2 mt-4">
     {{> postElement post }}
   </li>
-  <br>
   {{/each}}
 </ul>

@@ -1,3 +1,7 @@
+<div class="border-top pt-3">
+  <h2>New Post</h2>
+</div>
+
 <form>
   <div class='form-group'>
     <label for='post-title'>Title</label>
@@ -17,17 +21,21 @@
 >Submit Post
 </button>
 
-{{#if post.length}}
+<div class="border-top pt-3">
+  <h2>Post History</h2>
+</div>
+
 <section>
-  <h2>Your Posts</h2>
-  <ol>
+  <ul class="post-list">
+    <br>
     {{#each posts as |post|}}
-    <li>
-      {{> postElement post}}
-    </li>
-    {{/each}}
-  </ol>
+      <li class="border border p-2 mt-1">
+        {{> postElement post }}
+      </li>
+        {{/each}}
+    <br>
+</ul>
 </section>
-{{/if}}
+
 
 <script src="../js/newPost.js"></script>
