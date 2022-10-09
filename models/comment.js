@@ -33,8 +33,7 @@ Comment.init(
       },
     },
     created_at: {
-      type: DataTypes.DATE,
-      allowNull: false,
+      type: DataTypes.DATE
     },
   },
   {
