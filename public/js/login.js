@@ -23,3 +23,10 @@ async function loginFormHandler(event) {
 }
 
 document.querySelector('#loginBtn').addEventListener('click', loginFormHandler);
+
+const redirect = document.getElementById('signupRedirectBtn');
+redirect.addEventListener('click', redirectFunc);
+
+function redirectFunc() {
+  document.location.replace('/signup');
+}
