@@ -13,18 +13,30 @@
       crossorigin='anonymous'
     />
   </head>
-  <body>
-    <nav>
-      <h1>The Tech Blog</h1>
-      <a href='/'>Home</a>
-      {{!-- {{#if loggedIn}} --}}
-        <a href='/dashboard'>Dashboard</a>
-        <button id='logout' class='btn-no-style'>Logout</button>
-      {{!-- {{else}} --}}
-        <a href='/login'>Login</a>
-      {{!--{{/if}} --}}
+  <body id='mainContainer'>
+    <nav class='container text-center' id='navbarElement'>
+      <div class='col mb-4'>
+        <h1>The Tech Blog</h1>
+      </div>
+      <div class='row'>
+        <div class='col-3'>
+          <a href='/'>Home</a>
+        </div>
+        {{!-- {{#if loggedIn}} --}}
+        <div class='col-3'>
+          <a href='/dashboard'>Dashboard</a>
+        </div>
+        {{!-- {{else}} --}}
+        <div class='col-3'>
+          <a href='/login'>Login</a>
+        </div>
+        {{!--{{/if}} --}}
+        <div class='col'>
+          <button id='logout' class='btn btn-danger'>Logout</button>
+        </div>
+      </div>
     </nav>
-    <main class='mainContainer'>
+    <main class='container'>
       {{{body}}}
     </main>
   </body>
