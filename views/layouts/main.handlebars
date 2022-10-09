@@ -14,7 +14,7 @@
     />
   </head>
   <body id='mainContainer'>
-    <nav class='container text-center' id='navbarElement'>
+    <nav class='container text-center pb-2 rounded' id='navbarElement'>
       <div class='col mb-4'>
         <h1>The Tech Blog</h1>
       </div>
@@ -22,18 +22,18 @@
         <div class='col-3'>
           <a href='/'>Home</a>
         </div>
+        <div class='col-3'>
+          <a href='/login'>Login</a>
+        </div>
         {{!-- {{#if loggedIn}} --}}
         <div class='col-3'>
           <a href='/dashboard'>Dashboard</a>
         </div>
-        {{!-- {{else}} --}}
-        <div class='col-3'>
-          <a href='/login'>Login</a>
-        </div>
-        {{!--{{/if}} --}}
         <div class='col'>
           <button id='logout' class='btn btn-danger'>Logout</button>
         </div>
+        {{!-- {{/if}} --}}
+
       </div>
     </nav>
     <main class='container'>
