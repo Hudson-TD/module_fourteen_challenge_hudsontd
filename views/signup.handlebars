@@ -1,0 +1,41 @@
+<div>
+  New Account Creation:
+</div>
+<section class='text-center text-lg-start'>
+  <style>
+    .rounded-t-5 { border-top-left-radius: 0.5rem; border-top-right-radius:
+    0.5rem; } @media (min-width: 992px) { .rounded-tr-lg-0 {
+    border-top-right-radius: 0; } .rounded-bl-lg-5 { border-bottom-left-radius:
+    0.5rem; } }
+  </style>
+  <div class='container mt-5 d-flex justify-content-center'>
+    <div class='col-lg-8'>
+      <div class='container border p-5'>
+        <form>
+          <div class='form-outline mb-4'>
+            <input type='email' id='usernameSignup' class='form-control my-1' />
+            <label class='form-label' for='usernameSignup'>Pick a unique
+              username</label>
+          </div>
+
+          <div class='form-outline mb-4'>
+            <input
+              type='password'
+              id='passwordSignup'
+              class='form-control my-1'
+            />
+            <label class='form-label' for='passwordSignup'>Enter a password</label>
+          </div>
+
+          <button
+            type='button'
+            class='btn btn-success btn-block mb-4'
+            id='createUserBtn'
+          >Create Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src='../js/signup.js'></script>

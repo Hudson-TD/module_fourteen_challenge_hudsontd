@@ -17,4 +17,17 @@
 >Submit Post
 </button>
 
+{{#if post.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> postElement post}}
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
 <script src="../js/newPost.js"></script>
