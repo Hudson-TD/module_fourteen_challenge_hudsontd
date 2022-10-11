@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-//   if (req.session) {
     Comment.create({
       comment_text: req.body.comment_text,
       post_id: req.body.post_id,
@@ -24,7 +23,6 @@ router.post('/', (req, res) => {
         console.log(err);
         res.status(400).json(err);
       });
-//   }
 });
 
 
