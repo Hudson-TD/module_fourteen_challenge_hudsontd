@@ -56,16 +56,19 @@ router.get('/post/:id', (req, res) => {
         },
       },
     ],
-  }).then((returnedPostData) => {
-    if (!returnedPostData) {
-      res.status(404).json({ message: 'Could not find a post with this id' });
-      return;
-    }
-    const singlePost = returnedPostData.get({ plain: true });
-    res.render('singlePost', {
-      singlePost,
+  })
+    .then((dbPostData) => {
+      if (dbPostData) {
+        const post = dbPostData.get({ plain: true });
+
+        res.render('single-post', { post });
+      } else {
+        res.status(404).end();
+      }
+    })
+    .catch((err) => {
+      res.status(500).json(err);
     });
-  });
 });
 
 router.get('/login', (req, res) => {
