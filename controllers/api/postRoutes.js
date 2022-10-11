@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
 const sequelize = require('../../config/connection');
+const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
   Post.findAll({
@@ -65,6 +66,42 @@ router.post('/', (req, res) => {
     .then((returnedPostData) => res.json(returnedPostData))
     .catch((err) => {
       console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+router.put("/:id", (req, res) => {
+  Post.update(req.body, {
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(changes => {
+      if (changes > 0) {
+        res.status(200).end();
+      } else {
+        res.status(404).end();
+      }
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
+});
+
+router.delete("/:id", (req, res) => {
+  Post.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(changes => {
+      if (changes > 0) {
+        res.status(200).end();
+      } else {
+        res.status(404).end();
+      }
+    })
+    .catch(err => {
       res.status(500).json(err);
     });
 });
