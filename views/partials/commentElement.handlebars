@@ -1,0 +1,16 @@
+<div class='comments'>
+  <h2>Comment History</h2>
+  {{#each this}}
+    <div class='card'>
+      <h3 class='card-header'></h3>
+      <section class='comment card-body'>
+        <div class='text'>
+          {{comment_text}}
+        </div>
+        <div class='meta'>
+          -{{user.username}}
+        </div>
+      </section>
+    </div>
+  {{/each}}
+</div>
