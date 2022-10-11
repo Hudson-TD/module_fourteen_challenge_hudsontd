@@ -28,10 +28,11 @@
         <div class='col-3'>
           <a href='/dashboard'>Dashboard</a>
         </div>
+        {{#if loggedIn}}
         <div class='col'>
           <button id='logout' class='btn btn-danger'>Logout</button>
         </div>
-
+        {{/if}}
       </div>
     </nav>
     <main class='container'>
