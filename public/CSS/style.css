@@ -21,6 +21,7 @@
   text-decoration: underline;
 }
 
-/* #hiddenID {
+/* Effectively hides post id <p> tag on dashboard, color needs to match #mainContainer*/
+#hiddenID {
   color: rgb(255, 255, 255);
-} */
+}
