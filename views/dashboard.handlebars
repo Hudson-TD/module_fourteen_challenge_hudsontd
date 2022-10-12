@@ -22,7 +22,7 @@
 </button>
 
 <div class="border-top pt-3">
-  <h2>Post History</h2>
+  <h2>My Posts</h2>
 </div>
 
 <section>
@@ -30,12 +30,13 @@
     <br>
     {{#each posts as |post|}}
       <li class="border border p-2 mt-1">
-        {{> postElement post }}
+        {{> mypostsElement post }}
+        <btn class='btn btn-danger' id="delete-btn"> Delete Post</btn>
       </li>
-        {{/each}}
+    {{/each}}
     <br>
 </ul>
 </section>
 
-
 <script src="../js/newPost.js"></script>
+<script src="../js/delete.js"></script>
