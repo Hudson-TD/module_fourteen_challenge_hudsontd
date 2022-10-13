@@ -12,10 +12,10 @@
   background-color: rgb(210, 241, 211);
 }
 
-
 /* Login view styling */
 
-#loginBtn, #signupRedirectBtn {
+#loginBtn,
+#signupRedirectBtn {
   color: white;
   font-size: larger;
   text-decoration: underline;
